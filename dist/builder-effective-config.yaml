@@ -1,0 +1,15 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.yourcompany.electronfileeditor
+productName: ElectronFileEditor
+files:
+  - filter:
+      - main.js
+      - index.html
+      - renderer.js
+      - package.json
+win:
+  target: nsis
+  icon: icon.ico
+electronVersion: 31.1.0
