@@ -1,13 +1,22 @@
+"use strict";
 const { app, BrowserWindow, ipcMain, dialog } = require('electron');
-const path = require('path');
+const path = require('node:path');
 const fs = require('fs');
 
-function createWindow() {
+let win;
+
+//threw an error causing it to break
+/* require("electron-reloader")(__dirname, {
+  electron: path.join(__dirname, "node_modules", "bin", "electron"),
+  hardResetMethod: "exit"
+}); */
+
+const createWindow = () => {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
-      preload: path.join(__dirname, 'renderer.js'),
+      preload: path.join(__dirname, 'preload.js'),
       contextIsolation: false,
       enableRemoteModule: true,
       nodeIntegration: true
@@ -16,6 +25,10 @@ function createWindow() {
 
   win.loadFile('index.html');
 }
+
+try {
+	require('electron-reloader')(module);
+} catch {}
 
 app.whenReady().then(createWindow);
 

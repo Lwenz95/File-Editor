@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  input, textarea, button {
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+  }
+  textarea {
+    height: 100px;
+  }
+  #fileList {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
