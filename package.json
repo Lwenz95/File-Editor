@@ -1,0 +1,33 @@
+{
+  "name": "electron-file-editor",
+  "version": "1.0.0",
+  "description": "File editor with search and replace functionality",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.yourcompany.electronfileeditor",
+    "productName": "ElectronFileEditor",
+    "files": [
+      "main.js",
+      "index.html",
+      "renderer.js",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    }
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "electron-builder": "^22.11.7"
+  },
+  "author": "",
+  "license": "ISC"
+}

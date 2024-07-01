@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Editor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    input, textarea, button {
+      display: block;
+      margin-top: 10px;
+      width: 100%;
+    }
+    textarea {
+      height: 100px;
+    }
+    #fileList {
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>File Editor</h1>
+  <button id="selectFiles">Select Files</button>
+  <div id="fileList">No files selected</div>
+  <label for="searchValue">Search Value:</label>
+  <input type="text" id="searchValue">
+  <label for="replaceValue">Replace Value:</label>
+  <input type="text" id="replaceValue">
+  <button id="submit">Find and Replace</button>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
