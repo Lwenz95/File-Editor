@@ -3,7 +3,7 @@ body {
     margin: 20px;
   }
   input, textarea, button {
-    display: block;
+    display: flex;
     margin-top: 10px;
     width: 100%;
   }

@@ -7,7 +7,10 @@
     "start": "electron .",
     "build": "electron-builder",
     "rebuild": "electron-rebuild -f -w your module",
-    "postinstall": "electron-builder install-app-deps"
+    "postinstall": "electron-builder install-app-deps",
+    "app:dir": "electron-builder --dir",
+    "app:dist": "electron-builder"
+    
   },
   "build": {
     "appId": "com.yourcompany.electronfileeditor",
@@ -30,8 +33,10 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
+    "@electron/packager": "^18.3.3",
     "electron": "^31.1.0",
     "electron-builder": "^24.13.3",
+    "electron-packager": "^17.1.2",
     "electron-rebuild": "^3.2.9"
   },
   "author": "",

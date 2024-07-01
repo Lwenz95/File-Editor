@@ -1,5 +1,5 @@
 "use strict";
-const { app, BrowserWindow, ipcMain, dialog } = require('electron');
+const { app, BrowserWindow, ipcMain, dialog, globalShortcut } = require('electron');
 const path = require('node:path');
 const fs = require('fs');
 
@@ -11,8 +11,10 @@ let win;
   hardResetMethod: "exit"
 }); */
 
+const globalShortcut = electron.globalShortcut;
+
 const createWindow = () => {
-  const win = new BrowserWindow({
+  win = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
@@ -24,7 +26,16 @@ const createWindow = () => {
   });
 
   win.loadFile('index.html');
-}
+
+  globalShortcut.register('f5', () => {
+		console.log('f5 is pressed');
+		win.reload();
+  });
+  globalShortcut.register('CommandOrControl+R', () => {
+    console.log('CommandOrControl+R is pressed');
+    win.reload();
+
+});
 
 try {
 	require('electron-reloader')(module);
@@ -88,3 +99,5 @@ ipcMain.handle('open-file-dialog', async () => {
     return result.filePaths;
   }
 });
+
+}
