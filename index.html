@@ -10,14 +10,30 @@
 </head>
 
 <body>
-  <h1>File Editor</h1>
-  <button id="selectFiles">Wähle die Dateie(n) aus</button>
-  <div id="fileList">No files selected</div>
-  <label for="searchValue">Welcher Wert soll ersetzt werden? </label>
-  <input type="text" id="searchValue">
-  <label for="replaceValue">Lege neuen Wert fest: </label>
-  <input type="text" id="replaceValue">
-  <button id="submit">Bestätigen und speichern</button>
+
+  <div class="grid-container">
+    <div class="header">File Editor</div>
+    <div class="description"></div>
+    <div class="select">
+      <button id="selectFiles">Wähle die Dateie(n) aus</button>
+    </div>
+    <div class="filesSelected">
+      <div id="fileList">Keine Dateien ausgewählt</div>
+    </div>
+    <div class="istWert">
+      <label for="searchValue">Welcher Wert soll ersetzt werden?
+        <input type="text" id="searchValue"> </label>
+    </div>
+    <div class="sollWert">
+      <label for="replaceValue">Lege neuen Wert fest: </label>
+        <input type="text" id="replaceValue">
+    </div>
+    <div class="bestätige">
+      <button id="submit">Bestätigen und speichern</button>
+    </div>
+    <div class="sidebar"></div>
+    <div class="footer"></div>
+  </div>
 
   <script src="renderer.js"></script>
 </body>

@@ -1,17 +1,130 @@
+/* .select { grid-area: select; }
+.filesSelected { grid-area: files; }
+.istWert { grid-area: ist; }
+.sollWert { grid-area: soll; }
+.bestätige { grid-area: submit; }
+.description { grid-area: description; }
+
+ */
+/* .grid-container {
+  display: grid;
+  grid-template-areas:
+    ". . description description select ist . ."
+    ". . description description files soll . ."
+    ". . description description files submit . .";
+  gap: 20px;
+  background-color: transparent;
+  margin: 20px;
+  padding: 200px;
+} */
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.527);
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  height: auto;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+}
+
+
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-image: url("images/3d-abstract-network-communications-background-with-plexus-design.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-shadow: #cccccc62 1px 1px 2px ;
+
   }
   input, textarea, button {
-    display: flex;
-    margin-top: 10px;
+    margin-top: 50px;
     width: 100%;
-  }
+ }
   textarea {
-    height: 100px;
+    height: 50px;
   }
   #fileList {
     margin-top: 10px;
-    padding: 10px;
     border: 1px solid #ccc;
   }
+
+/*   .header {
+    margin: 20px;
+    padding: 30px;
+  }
+
+  .features {
+    background-size: 300px ;
+  }
+ */
+/*   h1 {
+    text-align: center;
+    border: rgba(4, 0, 54, 0.178) solid 0.5px;
+    background-color: #000a8f63;
+    width: 200px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+    box-shadow: rgba(255, 255, 255, 0.377) 0 0 6px;
+} */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, auto);
+  gap: 5px 5px;
+  grid-template-areas:
+    "header header header header header header header header header header header header"
+    "header header header header header header header header header header header header"
+    "description description description . . . . . . . sidebar sidebar"
+    "description description description . . . . . . . sidebar sidebar"
+    "description description description . . . . . . . sidebar sidebar"
+    "description description description select select select istWert istWert istWert istWert sidebar sidebar"
+    "description description description filesSelected filesSelected filesSelected istWert istWert istWert istWert sidebar sidebar"
+    "description description description filesSelected filesSelected filesSelected sollWert sollWert sollWert sollWert sidebar sidebar"
+    "description description description filesSelected filesSelected filesSelected sollWert sollWert sollWert sollWert sidebar sidebar"
+    "description description description filesSelected filesSelected filesSelected bestätige bestätige bestätige bestätige sidebar sidebar"
+    "description description description filesSelected filesSelected filesSelected bestätige bestätige bestätige bestätige sidebar sidebar"
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 100vw;
+}
+
+.header { grid-area: header; }
+.footer { grid-area: footer; }
+.description { grid-area: description; }
+.select { grid-area: select; }
+.filesSelected { grid-area: filesSelected; }
+.istWert { grid-area: istWert; }
+.sollWert { grid-area: sollWert; }
+.bestätige { grid-area: bestätige; }
+.sidebar { grid-area: sidebar; }
+
+@media screen and (max-width: 750px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "description"
+      "select"
+      "filesSelected"
+      "istWert"
+      "sollWert"
+      "bestätige"
+      "sidebar"
+      "footer";
+  }
+}

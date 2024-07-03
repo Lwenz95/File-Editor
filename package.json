@@ -10,7 +10,6 @@
     "postinstall": "electron-builder install-app-deps",
     "app:dir": "electron-builder --dir",
     "app:dist": "electron-builder"
-    
   },
   "build": {
     "appId": "com.yourcompany.electronfileeditor",
@@ -20,7 +19,8 @@
       "index.html",
       "renderer.js",
       "package.json",
-      "style.css"
+      "style.css",
+      "icons.jon"
     ],
     "win": {
       "target": "portable",
@@ -28,6 +28,7 @@
     }
   },
   "dependencies": {
+    "custom-electron-titlebar": "^4.2.8",
     "electron-reloader": "^1.2.3",
     "fs": "^0.0.1-security",
     "path": "^0.12.7"
@@ -36,9 +37,9 @@
     "@electron/packager": "^18.3.3",
     "electron": "^31.1.0",
     "electron-builder": "^24.13.3",
-    "electron-packager": "^17.1.2",
-    "electron-rebuild": "^3.2.9"
+    "electron-rebuild": "^3.2.9",
+    "custom-electron-titlebar": "4.2.8"
   },
-  "author": "",
+  "author": "Laura",
   "license": "ISC"
 }
