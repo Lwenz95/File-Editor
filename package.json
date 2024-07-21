@@ -9,7 +9,8 @@
     "rebuild": "electron-rebuild -f -w your module",
     "postinstall": "electron-builder install-app-deps",
     "app:dir": "electron-builder --dir",
-    "app:dist": "electron-builder"
+    "app:dist": "electron-builder",
+    "test": "jest"
   },
   "build": {
     "appId": "com.yourcompany.electronfileeditor",
@@ -31,14 +32,17 @@
     "custom-electron-titlebar": "^4.2.8",
     "electron-reloader": "^1.2.3",
     "fs": "^0.0.1-security",
-    "path": "^0.12.7"
+    "node": "^22.4.0",
+    "path": "^0.12.7",
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "@electron/packager": "^18.3.3",
+    "custom-electron-titlebar": "4.2.8",
     "electron": "^31.1.0",
     "electron-builder": "^24.13.3",
     "electron-rebuild": "^3.2.9",
-    "custom-electron-titlebar": "4.2.8"
+    "jest": "^27.0.0"
   },
   "author": "Laura",
   "license": "ISC"
