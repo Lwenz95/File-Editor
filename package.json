@@ -10,7 +10,9 @@
     "postinstall": "electron-builder install-app-deps",
     "app:dir": "electron-builder --dir",
     "app:dist": "electron-builder",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint .",
+    "start:dev": "nodemon main.js"
   },
   "build": {
     "appId": "com.yourcompany.electronfileeditor",
